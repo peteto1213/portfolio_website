@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+main {
+  max-width: 100ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+}
+header {
+  background-image: url(https://i.ytimg.com/vi/7dkrwPrmH-Y/maxresdefault.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: left;
+  /* non-sticky header */
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+header img {
+  height: 80px;
+  width: auto;
+}
+header #icon {
+  position: relative;
+  transition: 0.2s;
+  display: flex;
+  margin-left: 1%;
+}
+header h1 {
+  font-family: "Lobster", cursive;
+  margin-top: 10px;
+}
+.navbar-links {
+  display: flex;
+  justify-content: right;
+  margin-right: 3%;
+}
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-weight: 600;
+  position: relative;
+}
+
+.navbar-links li {
+  position: relative;
+  list-style: none;
+}
+
+.navbar-links li a:hover {
+  background-color: #ffffffcc;
+  color: cadetblue;
+}
+
+.navbar-links li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: darkslategrey;
+  font-weight: 500px;
+  transition: 0.2s;
+  display: block;
+  padding: 10px;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+/* Main content */
+main h1 {
+  margin-top: 40px;
+}
+main p {
+  margin-top: 20px;
+  line-height: 1.5rem;
+}
+
+/* footer section */
+footer {
+  background-image: url(https://i.ytimg.com/vi/7dkrwPrmH-Y/maxresdefault.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  width: 100vw;
+  margin-top: 30px;
+}
+footer ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  color: white;
+}
+
+footer img {
+  height: 50px;
+  width: 50px;
+}
+
+/* Mobile version < 900px, show toggle button*/
+@media (max-width: 1000px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+    color: whitesmoke;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    font-size: 50%;
+  }
+}
