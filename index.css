@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 }
 
 main {
-  max-width: 100ch;
+  max-width: 120ch;
   margin-left: auto;
   margin-right: auto;
 }
@@ -21,16 +21,18 @@ main {
 a {
   text-decoration: none;
 }
+
+/* Header section */
 header {
   background-image: url(https://i.ytimg.com/vi/7dkrwPrmH-Y/maxresdefault.jpg);
   background-size: cover;
   background-position: center;
   color: white;
-  text-align: left;
-  /* non-sticky header */
-  position: relative;
+  text-align: sticky;
+  /*sticky header */
+  position: sticky;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -38,6 +40,7 @@ header {
   z-index: 1;
   flex-wrap: wrap;
   padding: 20px;
+  font-family: "Poppins", sans-serif;
 }
 header img {
   height: 80px;
@@ -52,6 +55,7 @@ header #icon {
 header h1 {
   font-family: "Lobster", cursive;
   margin-top: 10px;
+  text-transform: uppercase;
 }
 .navbar-links {
   display: flex;
@@ -64,6 +68,7 @@ header h1 {
   display: flex;
   font-weight: 600;
   position: relative;
+  transition: all 0.5s;
 }
 
 .navbar-links li {
@@ -74,6 +79,7 @@ header h1 {
 .navbar-links li a:hover {
   background-color: #ffffffcc;
   color: cadetblue;
+  transition: 0.5s;
 }
 
 .navbar-links li a {
@@ -90,12 +96,13 @@ header h1 {
 .toggle-button {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 20px;
   display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
   height: 21px;
+  cursor: pointer;
 }
 
 .toggle-button .bar {
@@ -104,7 +111,16 @@ header h1 {
   background-color: white;
   border-radius: 10px;
 }
+
 /* Main content */
+/* Prevent overshooting when navbar become stciky */
+main section h1 {
+  position: relative;
+}
+main section h1 span {
+  position: absolute;
+  top: -150px;
+}
 main h1 {
   margin-top: 40px;
 }
@@ -135,10 +151,11 @@ footer img {
 }
 
 /* Mobile version < 900px, show toggle button*/
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   header {
     flex-direction: column;
     align-items: flex-start;
+    font-size: 90%;
   }
 
   .toggle-button {
@@ -165,6 +182,7 @@ footer img {
 
   .navbar-links.active {
     display: flex;
+    transition: 0.5s;
   }
 }
 

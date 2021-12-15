@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', (event) =>{
         navbarLinks.classList.toggle('active');
     })
 
+    // navbar will also close if any of the list item is clicked
+    navbarLinks.addEventListener('click', () =>{
+    navbarLinks.classList.toggle('active');
+})
+
 
 
 })
