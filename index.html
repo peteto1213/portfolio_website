@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pete's website</title>
+    <!-- font cdnjs css link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- custom css file -->
     <link rel="stylesheet" href="./index.css">
+    <!-- jquery cdnjs link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- custom javascript link -->
     <script src="./index.js"></script>
 </head>
 
@@ -28,7 +34,7 @@
 
         <div class="navbar-links">
             <ul>
-                <li> <a  href="#home">Home</a></li>
+                <li> <a  href="#">Home</a></li>
                 <li> <a  href="#about">About me</a></li>
                 <li> <a  href="#interest">Area of Interest</a></li>
                 <li> <a  href="#blog">Blog</a></li>
@@ -37,45 +43,158 @@
         </div>
     </header>
     <!-- End of header -->
+
     <!-- Main Content -->
     <main>
         <!-- Home section -->
-        <section id="home container">
-            <div class="home-div">
-                <!-- The navigation will now go exactly to the heading instead of the section -->
-                <h1><span id="home"></span>A warm welcome</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci veritatis pariatur, mollitia quia, totam corrupti
-                    ex aliquid enim excepturi sed ad dolorum delectus repellendus libero saepe dicta perferendis commodi earum dolore
-                    ipsa eligendi consequatur. Eveniet modi, blanditiis optio laudantium dignissimos nulla facere quos omnis,
-                    exercitationem quo voluptatem facilis totam cumque.</p>
+        <section class="home" id="home">
+            <div class="image">
+                <img src="./img/pete.JPG" alt="pete">
             </div>
+
+            <div class="content">
+                <span class="welcome">A Warm Welcome</span>
+                <h3> I'm <span>Pete</span> </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero possimus, laborum aliquam repellat enim similique error sed explicabo eaque vitae voluptatem inventore, tempore obcaecati eos numquam. Totam possimus ab reprehenderit!</p>
+                    <!-- About me button -->
+                    <a href="#about" class="btn">About me</a>
+            </div>
+
         </section>
         <!-- End of hone section -->
 
         <!-- About section -->
-        <section id="about container">
-            <div class="about-div">
-                <h1><span id="about"></span>About me</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci veritatis pariatur, mollitia quia, totam
-                    corrupti
-                    ex aliquid enim excepturi sed ad dolorum delectus repellendus libero saepe dicta perferendis commodi earum
-                    dolore
-                    ipsa eligendi consequatur. Eveniet modi, blanditiis optio laudantium dignissimos nulla facere quos omnis,
-                    exercitationem quo voluptatem facilis totam cumque.</p>
+        <section class="about">
+            <h1 class="heading"><span id="about" class="nav-ref"></span> about <span>me</span> </h1>
+
+            <div class="row">
+
+                <div class="box">
+                    <h3 class="title">coding skills</h3>
+
+                    <div class="progress">
+                        <h3> html <span>95%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="progress">
+                        <h3> css <span>80%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="progress">
+                        <h3> js <span>65%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="progress">
+                        <h3> java <span>85%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h3 class="title">professional skills</h3>
+
+                    <div class="progress">
+                        <h3> web design <span>75%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="progress">
+                        <h3> web development <span>70%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="progress">
+                        <h3> graphic design <span>65%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="progress">
+                        <h3> seo marketing <span>80%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h3 class="title">experience </h3>
+
+                    <div class="exp-box">
+                        <h3>front end development</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ducimus repudiandae natus, neque est quisquam aliquam dolorem voluptatibus quidem veritatis?</p>
+                    </div>
+                    <div class="exp-box">
+                        <h3>front end development</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ducimus repudiandae natus, neque est quisquam aliquam
+                            dolorem voluptatibus quidem veritatis?</p>
+                    </div>
+                    <div class="exp-box">
+                        <h3>front end development</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ducimus repudiandae natus, neque est quisquam aliquam
+                            dolorem voluptatibus quidem veritatis?</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h3 class="title">education </h3>
+                
+                    <div class="exp-box">
+                        <h3>Education University of Hong Kong</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ducimus repudiandae natus, neque est quisquam
+                            aliquam dolorem voluptatibus quidem veritatis?</p>
+                    </div>
+                    <div class="exp-box">
+                        <h3>Newcastle University</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ducimus repudiandae natus, neque est quisquam
+                            aliquam
+                            dolorem voluptatibus quidem veritatis?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="download">
+                <a href="#" class="btn">
+                    download CV
+                </a>
             </div>
         </section>
         <!-- End of about section -->
 
         <!-- Interest section -->
-        <section id="interest container">
-            <div class="interest-div">
-                <h1><span id="interest"></span>Area of Interest</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci veritatis pariatur, mollitia quia, totam
-                    corrupti
-                    ex aliquid enim excepturi sed ad dolorum delectus repellendus libero saepe dicta perferendis commodi earum
-                    dolore
-                    ipsa eligendi consequatur. Eveniet modi, blanditiis optio laudantium dignissimos nulla facere quos omnis,
-                    exercitationem quo voluptatem facilis totam cumque.</p>
+        <section class="interest">
+            <h1 class="heading"><span id="interest" class="nav-ref"></span> Area of <span>Interest</span> </h1>
+
+            <div class="box-container">
+
+                <div class="box">
+                    <span class="number">1</span>
+                    <!-- 128 x 128 -->
+                    <img src="./img/stock.jpg" alt="stock simulation">
+                    <h3>Stock simulation</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo maxime reiciendis nemo natus exercitationem asperiores iusto iste corrupti repellendus! Id?</p>
+                </div>
+
+                <div class="box">
+                    <span class="number">2</span>
+                    <!-- 128 x 128 -->
+                    <img src="./img/game.png" alt="game programming">
+                    <h3>Game Programming</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo maxime reiciendis nemo natus exercitationem
+                        asperiores iusto iste corrupti repellendus! Id?</p>
+                </div>
+
+                <div class="box">
+                    <span class="number">3</span>
+                    <!-- 128 x 128 -->
+                    <img src="./img/data-analysis.jpg" alt="data analysis">
+                    <h3>Data Analysis</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo maxime reiciendis nemo natus exercitationem
+                        asperiores iusto iste corrupti repellendus! Id?</p>
+                </div>
+
+                <div class="box">
+                    <span class="number">4</span>
+                    <!-- 128 x 128 -->
+                    <img src="./img/web-development.jfif" alt="web development">
+                    <h3>Web development</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo maxime reiciendis nemo natus exercitationem
+                        asperiores iusto iste corrupti repellendus! Id?</p>
+                </div>
             </div>
         </section>
         <!-- End of interest section -->
@@ -118,5 +237,7 @@
                 <li> <a href="#"><img src="https://findicons.com/files/icons/329/simple/128/e_mail.png" alt="email"></a></li>
             </ul>
     </footer>
+
+
 </body>
 </html>
