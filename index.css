@@ -85,7 +85,11 @@ section {
 
 .btn:hover {
   color: whitesmoke;
-  background: lightslategray;
+  background: rgb(84, 152, 155);
+}
+/* customised button icon */
+.btn i {
+  margin-left: 1rem;
 }
 /* end of button features */
 
@@ -99,12 +103,16 @@ section {
 }
 
 .heading span {
-  color: var(main-color);
+  color: var(--main-color);
   text-transform: uppercase;
 }
 
 a {
   text-decoration: none;
+}
+
+h3 {
+  text-transform: capitalize;
 }
 
 /* Header section */
@@ -228,11 +236,11 @@ section h1 .nav-ref {
 .home .image img {
   height: 50rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-  border-top: 2rem solid var(--primary-bg-color);
-  border-right: 2rem solid var(--primary-bg-color);
-  border-bottom: 2rem solid var(--main-color);
-  border-left: 2rem solid var(--main-color);
-  border-radius: 0.5rem;
+  border-top: 0.3rem solid var(--primary-bg-color);
+  border-right: 1rem solid var(--primary-bg-color);
+  border-bottom: 1rem solid var(--main-color);
+  border-left: 1rem solid var(--main-color);
+  border-radius: 50%;
   image-resolution: 746px 1020px;
 }
 
@@ -263,6 +271,31 @@ section h1 .nav-ref {
   color: var(--secondary-text-color);
   font-size: 2rem;
 }
+
+.home .btn {
+  display: inline-block;
+  padding: 0.7rem;
+  font-size: 1.7rem;
+  padding-left: 2rem;
+}
+
+.home .btn i {
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  font-size: 1.7rem;
+  text-align: center;
+  background: white;
+  color: var(--main-color);
+  border-radius: 70%;
+  margin-left: 0.7rem;
+  transition: 0.2s linear;
+}
+
+.home .btn:hover i {
+  margin-left: 1rem;
+}
+
 /* End of home section */
 
 /* About section */
@@ -314,39 +347,40 @@ section h1 .nav-ref {
   width: 100%;
   display: block;
 }
-/* Coding skils progress bar - row1 */
+
+/* Coding skils progress bar - row3 */
 /* html 95% bar2*/
-.about .row .box:nth-child(1) .progress:nth-child(2) .bar span {
+.about .row .box:nth-child(3) .progress:nth-child(2) .bar span {
   width: 95%;
 }
 /* css 80% bar3*/
-.about .row .box:nth-child(1) .progress:nth-child(3) .bar span {
+.about .row .box:nth-child(3) .progress:nth-child(3) .bar span {
   width: 80%;
 }
 /* js 65% bar4*/
-.about .row .box:nth-child(1) .progress:nth-child(4) .bar span {
+.about .row .box:nth-child(3) .progress:nth-child(4) .bar span {
   width: 65%;
 }
 /* java 85% bar5*/
-.about .row .box:nth-child(1) .progress:nth-child(5) .bar span {
+.about .row .box:nth-child(3) .progress:nth-child(5) .bar span {
   width: 85%;
 }
 
 /* Professional skills progress bar - row2*/
 /* web design 75% bar2*/
-.about .row .box:nth-child(2) .progress:nth-child(2) .bar span {
+.about .row .box:nth-child(4) .progress:nth-child(2) .bar span {
   width: 75%;
 }
 /* web development 70% bar3*/
-.about .row .box:nth-child(2) .progress:nth-child(3) .bar span {
+.about .row .box:nth-child(4) .progress:nth-child(3) .bar span {
   width: 70%;
 }
 /* graphic design 65% bar4*/
-.about .row .box:nth-child(2) .progress:nth-child(4) .bar span {
+.about .row .box:nth-child(4) .progress:nth-child(4) .bar span {
   width: 65%;
 }
 /* seo marketing 80% bar5*/
-.about .row .box:nth-child(2) .progress:nth-child(5) .bar span {
+.about .row .box:nth-child(4) .progress:nth-child(5) .bar span {
   width: 80%;
 }
 
@@ -390,6 +424,69 @@ section h1 .nav-ref {
   padding: 2rem;
   padding-bottom: 3rem;
   margin: 1rem;
+}
+
+/* about section: Info-container */
+.about .info-container {
+  flex: 1 1 42rem;
+}
+
+.about .info-container h1 {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  text-transform: uppercase;
+  padding: 1rem 0 1rem 0;
+}
+
+.about .info-container .box-container {
+  padding: 1rem 0;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about .info-container .box-container .box {
+  flex: 1 1 20rem;
+}
+
+.about .info-container .box-container .box h3 {
+  font-size: 1.7rem;
+  color: var(--secondary-text-color);
+  padding: 1rem 0;
+  font-weight: normal;
+}
+
+.about .info-container .box-container .box h3 span {
+  color: rgb(100, 188, 191);
+  font-weight: bolder;
+}
+
+/* about section: count-container */
+.about .count-container {
+  flex: 1 1 42rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-image: url(./img/white_background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.about .count-container .box {
+  flex: 1 1 20rem;
+  padding: 3rem 4rem;
+  border-radius: 0.5rem;
+  background: rgb(212, 237, 245);
+  box-shadow: var(--main-color);
+}
+
+.about .count-container .box h3 {
+  font-size: 5rem;
+  color: var(--main-color);
+}
+
+.about .count-container .box p {
+  font-size: 2rem;
+  color: var(--secondary-text-color);
 }
 /* End of About section */
 
@@ -523,6 +620,7 @@ footer img {
   }
 }
 
+/* screen < 768px */
 @media (max-width: 768px) {
   html {
     font-size: 65%;
