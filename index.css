@@ -2,6 +2,7 @@
 
 :root {
   --main-color: cadetblue;
+  --main-shadow: rgb(232, 238, 238);
   --primary-bg-color: #fff;
   --secondary-bg-color: #eee;
   --primary-text-color: #222;
@@ -90,6 +91,11 @@ section {
 /* customised button icon */
 .btn i {
   margin-left: 1rem;
+}
+
+i {
+  font-size: 2rem;
+  color: var(--main-color);
 }
 /* end of button features */
 
@@ -416,6 +422,23 @@ section h1 .nav-ref {
   background: var(--main-color);
 }
 
+.about .row .box .exp-box span {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--main-color);
+  border-radius: 5rem;
+  padding: 0.2rem 1.5rem;
+  background: var(--main-shadow);
+  transition: 0.2s linear;
+}
+
+.about .row .box .exp-box span:hover {
+  background-color: var(--main-color);
+  color: whitesmoke;
+  cursor: default;
+}
+
+/* Download CV button */
 .about .download {
   background: var(--primary-bg-color);
   border-radius: 0.5rem;
@@ -424,6 +447,10 @@ section h1 .nav-ref {
   padding: 2rem;
   padding-bottom: 3rem;
   margin: 1rem;
+}
+
+.about .download i {
+  color: var(--primary-bg-color);
 }
 
 /* about section: Info-container */
@@ -556,6 +583,142 @@ section h1 .nav-ref {
 }
 /* End of interest section */
 
+/* Portfolio section */
+.portfolio .button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.portfolio .button-container .btn {
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.portfolio .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.portfolio .image-container .box {
+  width: 35rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 25rem;
+  position: relative;
+  border: 1.5rem solid var(--primary-bg-color);
+}
+
+.portfolio .image-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.portfolio .image-container .box .info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--primary-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0.9;
+  transform: scale(0);
+  transition: 0.2s linear;
+}
+
+.portfolio .image-container .box:hover .info {
+  transform: scale(1);
+}
+
+.portfolio .image-container .box .info h3 {
+  font-size: 2.5rem;
+  color: var(--primary-text-color);
+}
+
+.portfolio i {
+  color: var(--primary-bg-color);
+  font-size: 2rem;
+}
+
+/* End of portfolio section */
+
+/* Blog section */
+.blog .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.blog .box-container .box {
+  width: 33rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  margin: 1.5rem;
+  background: var(--primary-bg-color);
+  overflow: hidden;
+}
+
+.blog .box-container .box img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.blog .box-container .box .content {
+  padding: 1.5rem;
+}
+
+.blog .box-container .box .content .info {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: left;
+  position: relative;
+  font-size: 1.5rem;
+  color: var(--primary-text-color);
+  background: var(--secondary-bg-color);
+  padding: 1rem;
+  margin-top: -4rem;
+  margin-bottom: 1rem;
+}
+
+.blog .box-container .box .content .info i {
+  padding: 0 1rem;
+}
+
+.blog .box-container .box .content .title {
+  color: var(--primary-text-color);
+  display: block;
+  font-size: 2.5rem;
+  padding: 0.5rem 0;
+  text-transform: capitalize;
+}
+
+.blog .box-container .box .content .title:hover {
+  text-decoration: underline;
+  color: var(--main-color);
+}
+
+.blog .box-container .box .content p {
+  color: var(--secondary-text-color);
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+/* End of blog section */
+
 /* footer section */
 footer {
   background-image: url(https://i.ytimg.com/vi/7dkrwPrmH-Y/maxresdefault.jpg);
@@ -637,6 +800,14 @@ footer img {
   }
 
   .interest .box-container .box {
+    width: 100%;
+  }
+
+  .portfolio .image-container .box {
+    width: 100%;
+  }
+
+  .blog .box-container .box {
     width: 100%;
   }
 }
