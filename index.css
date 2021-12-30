@@ -14,6 +14,9 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
 }
 
 *::selection {
@@ -23,6 +26,7 @@
 
 html {
   overflow-x: hidden;
+  font-size: 85%;
 }
 
 /* customised scroll bar */
@@ -40,6 +44,13 @@ html::-webkit-scrollbar-thumb {
 
 body {
   background: var(--primary-bg-color);
+}
+
+body.dark-theme {
+  --primary-bg-color: rgb(7, 27, 94);
+  --secondary-bg-color: #171c32;
+  --primary-text-color: #fff;
+  --secondary-text-color: #eee;
 }
 
 section {
@@ -123,7 +134,7 @@ h3 {
 
 /* Header section */
 header {
-  background-image: url(https://i.ytimg.com/vi/7dkrwPrmH-Y/maxresdefault.jpg);
+  background-image: url(./img/headerbg.jpg);
   background-size: cover;
   background-position: center;
   color: white;
@@ -140,6 +151,7 @@ header {
   flex-wrap: wrap;
   padding: 20px;
   font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
 }
 header img {
   height: 80px;
@@ -212,6 +224,28 @@ header h1 {
   width: 100%;
   background-color: white;
   border-radius: 10px;
+}
+
+#theme-toggler {
+  position: fixed;
+  top: 8.5rem;
+  right: 0.1rem;
+  z-index: 998;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 2rem;
+  background: var(--main-color);
+  color: white;
+  cursor: pointer;
+  border-radius: 5rem;
+  display: none;
+}
+
+#theme-toggler.fa-sun {
+  transform: rotate(-180deg);
+  transition: 0.3s;
 }
 /* End of the header section */
 
@@ -719,9 +753,115 @@ section h1 .nav-ref {
 
 /* End of blog section */
 
+/* Contact section */
+.contact .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact .row form {
+  flex: 1 1 40rem;
+  background: var(--primary-bg-color);
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.7rem;
+}
+
+.contact .row .map {
+  flex: 1 1 40rem;
+  margin: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.7rem;
+  border: 2rem solid var(--primary-bg-color);
+  width: 100%;
+}
+
+.contact .row form .inputBox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact .row form input,
+.contact .row form textarea {
+  padding: 1rem 0;
+  margin: 1rem 0;
+  font-size: 1.7rem;
+  text-transform: none;
+  background: none;
+  color: var(--main-color);
+  width: 100%;
+  border-bottom: 0.2rem solid var(--secondary-text-color);
+}
+
+.contact .row form input::placeholder,
+.contact .row form textarea::placeholder {
+  text-transform: capitalize;
+  color: var(--secondary-text-color);
+}
+
+.contact .row form input:focus,
+.contact .row form textarea:focus {
+  border-color: var(--main-color);
+}
+
+.contact .row form .inputBox input {
+  width: 49%;
+}
+
+.contact .row form textare {
+  height: 15rem;
+  resize: none;
+}
+
+.contact .row form .btn {
+  cursor: pointer;
+}
+
+.contact .box-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contact .box-container .box {
+  flex: 1 1 30rem;
+  margin: 1rem;
+  padding: 3rem 1rem;
+  background: var(--primary-bg-color);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.7rem;
+  text-align: center;
+}
+
+.contact .box-container .box i {
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  border-radius: 50%;
+  font-size: 3rem;
+  background: var(--secondary-bg-color);
+  color: var(--main-color);
+}
+
+.contact .box-container .box h3 {
+  color: var(--primary-text-color);
+  padding: 1rem 0;
+  font-size: 2rem;
+}
+
+.contact .box-container .box p {
+  font-size: 1.5rem;
+  color: var(--secondary-text-color);
+}
+/* End of contact section */
+
 /* footer section */
 footer {
-  background-image: url(https://i.ytimg.com/vi/7dkrwPrmH-Y/maxresdefault.jpg);
+  background-image: url(./img/headerbg.jpg);
   background-size: cover;
   background-position: center;
   padding: 20px;
@@ -808,6 +948,10 @@ footer img {
   }
 
   .blog .box-container .box {
+    width: 100%;
+  }
+
+  .contact .row form .inputBox input {
     width: 100%;
   }
 }

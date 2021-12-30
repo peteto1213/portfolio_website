@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', (event) =>{
 
     });
 
-
+    $('#theme-toggler').click(function(){
+        $(this).toggleClass('fa-sun');
+        $('body').toggleClass('dark-theme');
+    });
 
 })
