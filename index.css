@@ -864,20 +864,44 @@ footer {
   background-image: url(./img/headerbg.jpg);
   background-size: cover;
   background-position: center;
-  padding: 20px;
+  padding: 30px;
   width: 100vw;
   margin-top: 30px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 2rem;
 }
+
+footer .copyright {
+  margin-right: 2rem;
+  color: var(--primary-bg-color);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+footer .copyright i {
+  font-size: 2rem;
+  color: rgb(211, 206, 206);
+}
+
 footer ul {
   display: flex;
   list-style: none;
-  justify-content: space-around;
+  justify-content: center;
   color: white;
 }
 
+footer ul li {
+  padding: 10px 10px;
+}
+
 footer img {
-  height: 50px;
+  margin: 10px 10px;
   width: 50px;
+  height: 50px;
 }
 /* End of footer */
 
@@ -953,5 +977,18 @@ footer img {
 
   .contact .row form .inputBox input {
     width: 100%;
+  }
+
+  footer {
+    padding: 20px;
+  }
+
+  footer li {
+    margin: 10px 5px;
+  }
+
+  footer img {
+    width: 40px;
+    height: 40px;
   }
 }
