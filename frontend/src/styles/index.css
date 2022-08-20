@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
 .header {
   background: black;
+  font-family: 'Aboreto', cursive;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,7 +20,20 @@
   top: 0;
 }
 
-.header .logo {
+.header .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .top .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,20 +47,36 @@
   cursor: pointer;
 }
 
-.header .logo img {
-  max-width: 10rem;
-  max-height: 10rem;
+.header .top .logo img {
+  max-width: 8rem;
+  max-height: 8rem;
 }
 
-.header .logo .title {
-  font-size: 4rem;
+.header .top .logo .title {
+  font-size: 3.5rem;
   color: white;
   -webkit-transition: 0.2s all linear;
   transition: 0.2s all linear;
 }
 
-.header .logo .title:hover {
+.header .top .logo .title:hover {
   opacity: 0.8;
+}
+
+.header .top .menu {
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .top .menu .icon {
+  font-size: 3rem;
+  color: white;
 }
 
 .header .navbar {
@@ -64,7 +95,7 @@
 
 .header .navbar li {
   list-style: none;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 .header .navbar li a {
@@ -85,12 +116,28 @@
   padding: 0.3rem 3rem;
 }
 
-.header.active .logo .title {
+.header.active .top .logo .title {
   color: black;
 }
 
-.header.active .logo .title:hover {
+.header.active .top .logo .title:hover {
   color: gray;
+}
+
+.header.active .top .menu {
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header.active .top .menu .icon {
+  font-size: 3rem;
+  color: black;
 }
 
 .header.active .navbar li a {
@@ -99,6 +146,71 @@
 
 .header.active .navbar li a:hover {
   color: gray;
+}
+
+@media (max-width: 768px) {
+  .header, .header.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .top .menu, .header.active .top .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+  }
+  .header .top .menu:hover, .header.active .top .menu:hover {
+    opacity: 0.5;
+  }
+  .header .navbar, .header.active .navbar {
+    display: none;
+  }
+  .header .navbar.active, .header.active .navbar.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 2rem 0;
+    gap: 1rem;
+  }
+  .header .navbar.active li {
+    text-align: center;
+    padding: 1.5rem 0;
+    width: 100%;
+    cursor: pointer;
+    -webkit-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
+  }
+  .header .navbar.active li:hover {
+    background: rgba(255, 255, 255, 0.863);
+  }
+  .header .navbar.active li:hover a {
+    color: black;
+  }
+  .header.active .navbar.active li {
+    text-align: center;
+    padding: 1.5rem 0;
+    width: 100%;
+    cursor: pointer;
+    -webkit-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
+  }
+  .header.active .navbar.active li:hover {
+    background: rgba(0, 0, 0, 0.466);
+  }
+  .header.active .navbar.active li:hover a {
+    color: whitesmoke;
+  }
 }
 
 * {
@@ -111,6 +223,12 @@
 html {
   font-size: 62.5%;
   height: 200rem;
+}
+
+@media (max-width: 945px) {
+  html {
+    font-size: 55%;
+  }
 }
 
 @media (max-width: 768px) {

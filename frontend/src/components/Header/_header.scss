@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 
 .header{
     background: black;
+    font-family: 'Aboreto', cursive;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -11,26 +13,42 @@
     width: 100%;
     top: 0;
     
-    .logo{
+    .top{
         display: flex;
         flex-direction: row;
-        align-items: center;
-        cursor: pointer;
-
-        img{
-            max-width: 10rem;
-            max-height: 10rem;
-        }
-
-        .title{
-            font-size: 4rem;
-            color: white;
-            transition: 0.2s all linear;
-
-            &:hover{
-                opacity: 0.8;
+        justify-content: space-between;
+        .logo {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                cursor: pointer;
+        
+                img {
+                    max-width: 8rem;
+                    max-height: 8rem;
+                }
+        
+                .title {
+                    font-size: 3.5rem;
+                    color: white;
+                    transition: 0.2s all linear;
+        
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
             }
-        }
+        
+            .menu {
+                display: none;
+                flex-direction: row;
+                align-items: center;
+        
+                .icon {
+                    font-size: 3rem;
+                    color: white;
+                }
+            }
     }
 
     .navbar{
@@ -41,7 +59,7 @@
 
         li{
             list-style: none;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
 
             a{
                 transition: 0.2s all linear;
@@ -62,15 +80,28 @@
     transition: all ease-in-out 0.3s;
     padding: 0.3rem 3rem;
 
-    .logo{
-
-        .title{
-            color: black;
-
-            &:hover{
-                color: gray;
+    .top{
+        .logo {
+        
+                .title {
+                    color: black;
+        
+                    &:hover {
+                        color: gray;
+                    }
+                }
             }
-        }
+        
+            .menu {
+                display: none;
+                flex-direction: row;
+                align-items: center;
+        
+                .icon {
+                    font-size: 3rem;
+                    color: black;
+                }
+            }
     }
 
     .navbar{
@@ -84,4 +115,73 @@
         }
     }
 
+}
+
+@media (max-width: 768px) {
+
+
+    .header, .header.active{
+
+        display: flex;
+        flex-direction: column;
+
+        .top{
+            .menu {
+                    display: flex;
+                    cursor: pointer;
+                    transition: all ease-in-out 0.3s;
+            
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+        }
+
+        .navbar{
+            display: none;
+        }
+
+        .navbar.active{
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 0;
+            gap: 1rem;
+        }
+    }
+
+    .header{
+        .navbar.active{
+            li{
+                text-align: center;
+                padding: 1.5rem 0;
+                width: 100%;
+                cursor: pointer;
+                transition: 0.2s all ease-in-out;
+                &:hover{
+                    background: rgba(255, 255, 255, 0.863);
+                    a{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+
+    .header.active{
+        .navbar.active{
+            li{
+                text-align: center;
+                padding: 1.5rem 0;
+                width: 100%;
+                cursor: pointer;
+                transition: 0.2s all ease-in-out;
+                &:hover{
+                    background: rgba(0, 0, 0, 0.466);
+                    a{
+                        color: whitesmoke;
+                    }
+                }
+            }
+        }
+    }
 }
