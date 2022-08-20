@@ -1,0 +1,29 @@
+@import './variables/variables';
+
+//components import
+@import '../components/Header/header';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    height: 200rem;
+}
+
+
+@media (max-width: 768px) {
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    html{
+        font-size: 45%;
+    }
+}
+

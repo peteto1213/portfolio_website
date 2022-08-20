@@ -1,0 +1,127 @@
+.header {
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 3rem;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.header .logo img {
+  max-width: 10rem;
+  max-height: 10rem;
+}
+
+.header .logo .title {
+  font-size: 4rem;
+  color: white;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+
+.header .logo .title:hover {
+  opacity: 0.8;
+}
+
+.header .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.2rem;
+}
+
+.header .navbar li {
+  list-style: none;
+  font-size: 2.5rem;
+}
+
+.header .navbar li a {
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.header .navbar li a:hover {
+  opacity: 0.8;
+}
+
+.header.active {
+  background: whitesmoke;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  padding: 0.3rem 3rem;
+}
+
+.header.active .logo .title {
+  color: black;
+}
+
+.header.active .logo .title:hover {
+  color: gray;
+}
+
+.header.active .navbar li a {
+  color: black;
+}
+
+.header.active .navbar li a:hover {
+  color: gray;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 200rem;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 45%;
+  }
+}
+/*# sourceMappingURL=index.css.map */
