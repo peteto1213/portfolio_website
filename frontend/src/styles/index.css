@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
 .header {
   background: black;
   font-family: 'Aboreto', cursive;
@@ -93,19 +94,16 @@
   gap: 2.2rem;
 }
 
-.header .navbar li {
-  list-style: none;
+.header .navbar a {
   font-size: 2.2rem;
-}
-
-.header .navbar li a {
+  width: 100%;
   -webkit-transition: 0.2s all linear;
   transition: 0.2s all linear;
   text-decoration: none;
   color: whitesmoke;
 }
 
-.header .navbar li a:hover {
+.header .navbar a:hover {
   opacity: 0.8;
 }
 
@@ -140,11 +138,12 @@
   color: black;
 }
 
-.header.active .navbar li a {
+.header.active .navbar a {
+  width: 100%;
   color: black;
 }
 
-.header.active .navbar li a:hover {
+.header.active .navbar a:hover {
   color: gray;
 }
 
@@ -183,33 +182,118 @@
     padding: 2rem 0;
     gap: 1rem;
   }
-  .header .navbar.active li {
+  .header .navbar.active a {
     text-align: center;
     padding: 1.5rem 0;
     width: 100%;
     cursor: pointer;
     -webkit-transition: 0.2s all ease-in-out;
     transition: 0.2s all ease-in-out;
+    color: whitesmoke;
   }
-  .header .navbar.active li:hover {
+  .header .navbar.active a:hover {
     background: rgba(255, 255, 255, 0.863);
-  }
-  .header .navbar.active li:hover a {
     color: black;
   }
-  .header.active .navbar.active li {
+  .header.active .navbar.active a {
     text-align: center;
     padding: 1.5rem 0;
     width: 100%;
     cursor: pointer;
     -webkit-transition: 0.2s all ease-in-out;
     transition: 0.2s all ease-in-out;
+    color: black;
   }
-  .header.active .navbar.active li:hover {
+  .header.active .navbar.active a:hover {
     background: rgba(0, 0, 0, 0.466);
-  }
-  .header.active .navbar.active li:hover a {
     color: whitesmoke;
+  }
+}
+
+.home {
+  margin-top: 8rem;
+  min-height: 100vh;
+  background-image: url("../resources/homeBg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.home .banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  gap: 1.5rem;
+  margin-top: -5rem;
+}
+
+.home .banner h1 {
+  font-size: 7rem;
+  text-align: center;
+}
+
+.home .banner h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.7rem;
+}
+
+.home .banner button {
+  font-size: 2.5rem;
+  background: none;
+  color: white;
+  border: 0.2rem solid white;
+  padding: 1.2rem 3.6rem;
+  border-radius: 2.5rem;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.home .banner button:hover {
+  background: whitesmoke;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .home .banner h1 {
+    font-size: 6rem;
+  }
+  .home .banner h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .home .banner h1 {
+    font-size: 5.5rem;
+  }
+  .home .banner h2 {
+    font-size: 2.75rem;
   }
 }
 
@@ -223,6 +307,16 @@
 html {
   font-size: 62.5%;
   height: 200rem;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+
+html ::-webkit-scrollbar {
+  background: #dadada;
+}
+
+html ::-webkit-scrollbar-thumb {
+  background: #505050;
 }
 
 @media (max-width: 945px) {

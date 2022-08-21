@@ -44,7 +44,7 @@ function Header() {
       <div className='top'>
         <div className="logo">
           <img src={icon} alt="icon" />
-          <h3 className='title'>Pete's Portfolio</h3>
+          <h3 className='title' onClick={hideMenu}>Pete's Portfolio</h3>
         </div>
 
         <div className="menu" onClick={handleShowMenu}>
@@ -52,14 +52,14 @@ function Header() {
         </div>
       </div>
 
-      <ul className={navbarClass ? "navbar active" : "navbar"}>
-        <li onClick={hideMenu}><a href="#">Home</a></li>
-        <li onClick={hideMenu}><a href="#">About</a></li>
-        <li onClick={hideMenu}><a href="#">Skills</a></li>
-        <li onClick={hideMenu}><a href="#">Projects</a></li>
-        <li onClick={hideMenu}><a href="#">Blogs</a></li>
-        <li onClick={hideMenu}><a href="#">Contact</a></li>
-      </ul>
+      <div id='navbar' className={navbarClass ? "navbar active" : "navbar"}>
+        <a href="#home" onClick={hideMenu}>Home</a>
+        <a href="#" onClick={hideMenu}>About</a>
+        <a href="#" onClick={hideMenu}>Skills</a>
+        <a href="#" onClick={hideMenu}>Projects</a>
+        <a href="#" onClick={hideMenu}>Blogs</a>
+        <a href="#" onClick={hideMenu}>Contact</a>
+      </div>
 
     </header>
   )

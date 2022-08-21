@@ -12,6 +12,7 @@
     position: fixed;
     width: 100%;
     top: 0;
+
     
     .top{
         display: flex;
@@ -57,18 +58,15 @@
         align-items: center;
         gap: 2.2rem;
 
-        li{
-            list-style: none;
+        a{
             font-size: 2.2rem;
+            width: 100%;
+            transition: 0.2s all linear;
+            text-decoration: none;
+            color: whitesmoke;
 
-            a{
-                transition: 0.2s all linear;
-                text-decoration: none;
-                color: whitesmoke;
-
-                &:hover{
-                    opacity: 0.8;
-                }
+            &:hover{
+                opacity: 0.8;
             }
         }
     }
@@ -105,12 +103,11 @@
     }
 
     .navbar{
-        li{
-            a{
-                color: black;
-                &:hover{
-                    color: gray;
-                }
+        a{
+            width: 100%;
+            color: black;
+            &:hover{
+                color: gray;
             }
         }
     }
@@ -151,17 +148,17 @@
 
     .header{
         .navbar.active{
-            li{
+            a{
                 text-align: center;
                 padding: 1.5rem 0;
                 width: 100%;
                 cursor: pointer;
                 transition: 0.2s all ease-in-out;
+                color: whitesmoke;
+
                 &:hover{
                     background: rgba(255, 255, 255, 0.863);
-                    a{
-                        color: black;
-                    }
+                    color: black;
                 }
             }
         }
@@ -169,17 +166,17 @@
 
     .header.active{
         .navbar.active{
-            li{
+            a{
                 text-align: center;
                 padding: 1.5rem 0;
                 width: 100%;
                 cursor: pointer;
                 transition: 0.2s all ease-in-out;
+                color: black;
+
                 &:hover{
                     background: rgba(0, 0, 0, 0.466);
-                    a{
-                        color: whitesmoke;
-                    }
+                    color: whitesmoke;
                 }
             }
         }
