@@ -54,7 +54,7 @@ function Header() {
 
       <div id='navbar' className={navbarClass ? "navbar active" : "navbar"}>
         <a href="#home" onClick={hideMenu}>Home</a>
-        <a href="#" onClick={hideMenu}>About</a>
+        <a href="#about" onClick={hideMenu}>About</a>
         <a href="#" onClick={hideMenu}>Skills</a>
         <a href="#" onClick={hideMenu}>Projects</a>
         <a href="#" onClick={hideMenu}>Blogs</a>

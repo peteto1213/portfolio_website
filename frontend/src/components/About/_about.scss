@@ -1,0 +1,122 @@
+.about{
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 6rem;
+
+    .content{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20rem;
+        justify-content: center;
+        margin-top: 4rem;
+
+        .info{
+            display: flex;
+            flex-direction: column;
+            padding: 0 2rem;
+
+            h3{
+                font-size: 4rem;
+                margin-bottom: 2rem;
+            }
+
+            .basic-info{
+                display: flex;
+                flex-direction: row;
+                gap: 1.5rem;
+                margin-bottom: 2rem;
+
+                .row{
+                    p{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 1rem;
+                        align-items: center;
+                        font-size: 2.5rem;
+                        margin-bottom: 1.5rem;
+                        .icon{
+                            font-size: 2.6rem;
+                            color: gray;
+                        }
+                    }
+                }
+            }
+
+            button{
+                font-size: 2.5rem;
+                width: 40%;
+                background: gray;
+                color: white;
+                border: none;
+                border-radius: 2rem;
+                cursor: pointer;
+                padding: 1rem 2rem;
+                transition: all 0.3s linear;
+
+                .icon{
+                    transition: all 0.3s linear;
+                }
+
+                &:hover{
+                    opacity: 0.7;
+
+                    .icon{
+                        margin-left: 0.5rem;
+                    }
+                }
+            }
+
+        }
+
+        .media{
+            display: flex;
+            flex-direction: column;
+
+            h3{
+                font-size: 4rem;
+                margin-bottom: 2rem;
+            }
+            .media-icons{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                a{
+
+                    img{
+                        height: 10rem;
+                        width: 10rem;
+                        transition: all 0.3s linear;
+
+                        &:hover{
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .about{
+        .content{
+            gap: 10rem;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .about {
+        .content {
+            margin-top: 0;
+            gap: 5rem;
+        }
+    }
+}
