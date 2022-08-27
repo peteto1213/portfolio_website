@@ -2,6 +2,7 @@ import React from 'react'
 import { FaIdCard, FaDownload, FaUser, FaSchool, FaEnvelope, FaMapMarkerAlt, FaLanguage, FaClock } from 'react-icons/fa'
 import github from '../../resources/github.png'
 import linkedin from '../../resources/linkedin.png'
+import cv from '../../resources/PETE_CV.pdf'
 
 function About() {
   return (
@@ -31,7 +32,7 @@ function About() {
                     </div>
                 </div>
 
-                <button>Download CV <FaDownload className='icon' /></button>
+                <a href={cv} download="PETE's CV" target="_blank" >Download CV <FaDownload className='icon' /></a>
             </div>
 
             <div className="media">
