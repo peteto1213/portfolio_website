@@ -35,7 +35,7 @@ function About() {
             </div>
 
             <div className="media">
-                <h3>Profile</h3>
+                <h3>My Profile</h3>
                 <div className="media-icons">
                     <a href="https://github.com/peteto1213" target="_blank"><img src={github} alt="" /></a>
                     <a href="https://www.linkedin.com/in/pete-to-301b29234/" target="_blank"><img src={linkedin} alt="" /></a>

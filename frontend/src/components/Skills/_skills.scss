@@ -1,0 +1,65 @@
+.skills{
+    background: rgb(236, 236, 236);
+    
+    .content{
+        padding: 0 20rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 7rem;
+        justify-content: space-around;
+
+        .row{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            h3{
+                font-size: 4rem;
+                color: #333;
+            }
+
+            .images{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 2rem;
+
+                .single-image{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1rem;
+                    
+                    img{
+                        width: 10rem;
+                        height: 10rem;
+                    }
+
+                    p{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .skills{
+        .content{
+            padding: 0 10rem;
+            gap: 5rem;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .skills {
+        .content {
+            padding: 0 5rem;
+            gap: 3rem;
+        }
+    }
+}

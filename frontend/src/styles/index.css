@@ -58,6 +58,7 @@
   color: white;
   -webkit-transition: 0.2s all linear;
   transition: 0.2s all linear;
+  text-decoration: none;
 }
 
 .header .top .logo .title:hover {
@@ -305,7 +306,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 6rem;
 }
 
 .about .content {
@@ -457,6 +457,92 @@
   }
 }
 
+.skills {
+  background: #ececec;
+}
+
+.skills .content {
+  padding: 0 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 7rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.skills .content .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.skills .content .row h3 {
+  font-size: 4rem;
+  color: #333;
+}
+
+.skills .content .row .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.skills .content .row .images .single-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.skills .content .row .images .single-image img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.skills .content .row .images .single-image p {
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .skills .content {
+    padding: 0 10rem;
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .skills .content {
+    padding: 0 5rem;
+    gap: 3rem;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -466,7 +552,6 @@
 
 html {
   font-size: 62.5%;
-  height: 200rem;
   scroll-behavior: smooth;
   scroll-padding-top: 10rem;
   font-family: 'Source Sans Pro', sans-serif;
@@ -478,6 +563,10 @@ html ::-webkit-scrollbar {
 
 html ::-webkit-scrollbar-thumb {
   background: #505050;
+}
+
+section {
+  padding-bottom: 10rem;
 }
 
 section .heading {
