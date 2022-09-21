@@ -11,7 +11,7 @@ function Skills() {
     <section id='skills' className="skills">
         <div className="heading">
             <FaTools className='icon' />
-            <h1>My Skills</h1>
+            <h1><span>My</span> Skills</h1>
         </div>
 
         <div className="content">

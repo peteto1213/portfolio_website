@@ -56,7 +56,7 @@ function Header() {
         <a href="#home" onClick={hideMenu}>Home</a>
         <a href="#about" onClick={hideMenu}>About</a>
         <a href="#skills" onClick={hideMenu}>Skills</a>
-        <a href="#" onClick={hideMenu}>Projects</a>
+        <a href="#projects" onClick={hideMenu}>Projects</a>
         <a href="#" onClick={hideMenu}>Blogs</a>
         <a href="#" onClick={hideMenu}>Contact</a>
       </div>

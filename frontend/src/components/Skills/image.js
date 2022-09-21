@@ -19,8 +19,6 @@ const image = {
     node: node,
     mysql: mysql,
     mongodb: mongodb,
-    
-
 }
 
 export default image
