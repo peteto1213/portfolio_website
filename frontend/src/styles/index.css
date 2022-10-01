@@ -356,7 +356,78 @@
   display: flex;
   flex-direction: column;
 }
+.projects .card-container {
+  width: 100%;
+  padding: 0 7%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2rem;
+}
+.projects .card-container .card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  width: 32%;
+  padding: 1rem 1.2rem;
+  border: 0.3rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  height: 100%;
+}
+.projects .card-container .card .preview {
+  width: 100%;
+  height: 20rem;
+}
+.projects .card-container .card .title {
+  font-size: 3.5rem;
+  color: black;
+}
+.projects .card-container .card .description {
+  font-size: 2.3rem;
+  color: gray;
+}
+.projects .card-container .card .stack {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: darkslategray;
+}
+.projects .card-container .card .stack p {
+  font-size: 2rem;
+}
+.projects .card-container .card .demo-link {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.projects .card-container .card .demo-link a img {
+  width: 5rem;
+  height: 5rem;
+  transition: all 0.2s ease-in-out;
+}
+.projects .card-container .card .demo-link a img:hover {
+  opacity: 0.5;
+}
 
+@media (max-width: 991px) {
+  .projects .card-container {
+    padding: 0 4%;
+  }
+  .projects .card-container .card {
+    width: 49%;
+  }
+}
+@media (max-width: 500px) {
+  .projects .card-container {
+    padding: 0 1%;
+    gap: 3rem;
+  }
+  .projects .card-container .card {
+    width: 98%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -366,7 +437,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 10rem;
+  scroll-padding-top: 7.5rem;
   font-family: "Source Sans Pro", sans-serif;
 }
 html ::-webkit-scrollbar {
@@ -377,7 +448,7 @@ html ::-webkit-scrollbar-thumb {
 }
 
 section {
-  padding-top: 5rem;
+  padding-top: 3rem;
   padding-bottom: 10rem;
 }
 section .heading {

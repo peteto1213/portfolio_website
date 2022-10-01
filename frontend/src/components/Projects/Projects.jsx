@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaVideo } from 'react-icons/fa'
+import ProjectCard from './components/ProjectCard'
 
 function Projects() {
   return (
@@ -8,6 +9,11 @@ function Projects() {
             <FaVideo className='icon' />
             <h1>Projects <span>Demo</span></h1>
         </div>
+
+        <div className="card-container">
+          <ProjectCard />
+        </div>
+
     </section>
   )
 }
