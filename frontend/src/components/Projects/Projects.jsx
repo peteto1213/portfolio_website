@@ -12,6 +12,9 @@ function Projects() {
 
         <div className="card-container">
           <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
         </div>
 
     </section>

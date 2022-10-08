@@ -38,10 +38,18 @@
             border-radius: 2.5rem;
             cursor: pointer;
             transition: all 0.2s linear;
+
+            a{
+                text-decoration: none;
+                color: white;
+            }
             
             &:hover{
                 background: whitesmoke;
-                color: #333;
+                
+                a{
+                    color: #333;
+                }
             }
         }
     }

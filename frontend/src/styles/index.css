@@ -176,8 +176,14 @@
   cursor: pointer;
   transition: all 0.2s linear;
 }
+.home .banner button a {
+  text-decoration: none;
+  color: white;
+}
 .home .banner button:hover {
   background: whitesmoke;
+}
+.home .banner button:hover a {
   color: #333;
 }
 
@@ -198,7 +204,7 @@
   }
 }
 .about {
-  background: whitesmoke;
+  background: rgb(245, 245, 245);
   display: flex;
   flex-direction: column;
 }
@@ -300,7 +306,7 @@
   }
 }
 .skills {
-  background: rgb(236, 236, 236);
+  background: rgb(240, 240, 240);
 }
 .skills .content {
   padding: 0 20rem;
@@ -352,7 +358,7 @@
   }
 }
 .projects {
-  background: rgb(226, 226, 226);
+  background: rgb(235, 235, 235);
   display: flex;
   flex-direction: column;
 }
@@ -416,7 +422,7 @@
     padding: 0 4%;
   }
   .projects .card-container .card {
-    width: 49%;
+    width: 48%;
   }
 }
 @media (max-width: 500px) {
@@ -428,6 +434,10 @@
     width: 98%;
   }
 }
+.contact {
+  background: rgb(230, 230, 230);
+}
+
 * {
   margin: 0;
   padding: 0;
