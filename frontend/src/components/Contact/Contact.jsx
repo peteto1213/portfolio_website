@@ -8,6 +8,9 @@ function Contact() {
             <FaCommentDots className='icon' />
             <h1>Contact <span>Me</span></h1>
         </div>
+
+        
+
     </section>
   )
 }
