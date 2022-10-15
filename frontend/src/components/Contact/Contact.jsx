@@ -1,7 +1,46 @@
 import React from 'react'
-import { FaCommentDots, FaEnvelope, FaPhoneSquareAlt } from 'react-icons/fa'
+import { useState } from 'react'
+import { FaCommentDots, FaEnvelope, FaPhoneSquareAlt, FaClone } from 'react-icons/fa'
 
 function Contact() {
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: ""
+  })
+
+  const handleFormChange = (e) => {
+    const {name, value} = e.target
+
+    setForm(prevForm => {
+      return {
+        ...prevForm,
+        [name]: value
+      }
+    })
+  }
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault()
+    console.log(form);
+  }
+
+  const [email, setEmail] = useState("peteto1213@gmail.com")
+  const [phone, setPhone] = useState("+852 64875640")
+
+  const copyEmail = () => {
+    setEmail("peteto1213@gmail.com")
+    navigator.clipboard.writeText(email)
+    alert("email copied")
+  }
+
+  const copyPhone = () => {
+    setPhone("+852 64875640")
+    navigator.clipboard.writeText(phone)
+    alert("phone number copied")
+  }
+
   return (
     <section id='contact' className='contact'>
         <div className="heading">
@@ -10,14 +49,22 @@ function Contact() {
         </div>
 
         <div className="contact-container">
-          <div className="contact-card">
+          <div 
+            className="contact-card"
+            onClick={copyEmail}
+          >
             <FaEnvelope className='icon' />
-            <h3>peteto1213@gmail.com</h3>
+            <h3>{email}</h3>
+            <FaClone className='small-icon'/>
           </div>
 
-          <div className="contact-card">
+          <div 
+            className="contact-card"
+            onClick={copyPhone}
+          >
             <FaPhoneSquareAlt className='icon' />
-            <h3>+852 64875640</h3>
+            <h3>{phone}</h3>
+            <FaClone className='small-icon'/>
           </div>
         </div>
 
@@ -26,16 +73,27 @@ function Contact() {
             <input 
               type="text" 
               placeholder='Your Name'
+              name='name'
+              value={form.name}
+              onChange={handleFormChange}
             />
             <input 
-              type="text" 
+              type="email" 
               placeholder='Your Email'
+              name='email'
+              value={form.email}
+              onChange={handleFormChange}
             />
-            <input 
-              type="text" 
+            <textarea 
               placeholder='Your Message'
-            />
-            <button>Send Message</button>
+              cols="30" 
+              rows="10"
+              name='message'
+              value={form.message}
+              onChange={handleFormChange}
+            >
+            </textarea>
+            <button onClick={handleFormSubmit}>Send Message</button>
           </form>
         </div>
 

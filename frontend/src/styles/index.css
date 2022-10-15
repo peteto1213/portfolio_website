@@ -166,7 +166,7 @@
   font-size: 3.5rem;
   margin-bottom: 1.7rem;
 }
-.home .banner button {
+.home .banner a {
   font-size: 2.5rem;
   background: none;
   color: white;
@@ -175,15 +175,10 @@
   border-radius: 2.5rem;
   cursor: pointer;
   transition: all 0.2s linear;
-}
-.home .banner button a {
   text-decoration: none;
-  color: white;
 }
-.home .banner button:hover {
+.home .banner a:hover {
   background: whitesmoke;
-}
-.home .banner button:hover a {
   color: #333;
 }
 
@@ -447,7 +442,7 @@
   width: 50%;
   margin: 0 auto;
   gap: 1.5rem;
-  padding: 5rem 0;
+  padding: 4rem 0 6rem 0;
 }
 .contact .contact-container .contact-card {
   display: flex;
@@ -456,7 +451,9 @@
   gap: 0.7rem;
   border: 0.1rem solid rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
 }
 .contact .contact-container .contact-card .icon {
   font-size: 3.5rem;
@@ -465,14 +462,81 @@
 .contact .contact-container .contact-card h3 {
   font-size: 2rem;
 }
+.contact .contact-container .contact-card .small-icon {
+  color: lightgray;
+  font-size: 2rem;
+  margin-left: auto;
+}
+.contact .contact-container .contact-card:hover {
+  background: whitesmoke;
+  border: none;
+}
+.contact .form-container {
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  width: 70%;
+  margin: 0 auto;
+  padding: 3.5rem 2.5rem;
+}
+.contact .form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contact .form-container form input, .contact .form-container form textarea {
+  font-size: 2rem;
+  padding: 2rem 1.5rem;
+  border-radius: 1.5rem;
+  border: none;
+  background: rgb(255, 255, 255);
+  opacity: 0.9;
+}
+.contact .form-container form button {
+  width: 33%;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 2rem;
+  padding: 2rem 0;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.contact .form-container form button:hover {
+  background: rgba(0, 0, 0, 0.3);
+  color: rgb(83, 83, 83);
+}
 
+@media (max-width: 768px) {
+  .contact .contact-container {
+    width: 70%;
+    padding: 3rem 0;
+  }
+  .contact .contact-container .contact-card {
+    width: 100%;
+    gap: 1.5rem;
+  }
+  .contact .form-container {
+    width: 85%;
+  }
+  .contact .form-container form button {
+    width: 50%;
+  }
+}
 @media (max-width: 500px) {
   .contact .contact-container {
-    width: 100%;
+    width: 98%;
+    padding: 1.5rem 0;
   }
   .contact .contact-container .contact-card {
     width: 100%;
     gap: 2rem;
+  }
+  .contact .form-container {
+    width: 98%;
+  }
+  .contact .form-container form button {
+    width: 100%;
   }
 }
 * {
