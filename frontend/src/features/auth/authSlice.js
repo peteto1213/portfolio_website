@@ -12,10 +12,10 @@ const initialState = {
 }
 
 // check admin login
-export const login = createAsyncThunk('auth/login', async(user, thunkAPI) => {
+export const login = createAsyncThunk('auth/login', async(userData, thunkAPI) => {
     try {
 
-        return await authService.login(user)
+        return await authService.login(userData)
 
     } catch (error) {
         
