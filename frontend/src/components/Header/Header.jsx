@@ -2,8 +2,11 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { FaThList } from 'react-icons/fa'
 import icon from '../../resources/icon.png';
+import { useNavigate } from 'react-router-dom'
 
 function Header() {
+
+  const navigate = useNavigate()
 
   const [headerClass, setHeaderClass] = useState('header')
   const [navbarClass, setNavbarClass] = useState(false)
@@ -38,12 +41,16 @@ function Header() {
 
   }, [])
 
+  const navigateAdmin = () => {
+    navigate('/adminHome')
+  }
+
   return (
     <header className={headerClass} >
 
       <div className='top'>
         <div className="logo">
-          <img src={icon} alt="icon" />
+          <img src={icon} alt="icon" onClick={navigateAdmin} />
           <a className='title' onClick={hideMenu} href="https://github.com/peteto1213" target="blank">Pete's Portfolio</a>
         </div>
 

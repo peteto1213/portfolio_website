@@ -1,5 +1,9 @@
 @import './variables/variables';
 
+// pages import
+@import '../pages/Login/login';
+@import '../pages/AdminHome/adminHome';
+
 //components import
 @import '../components/Header/header';
 @import '../components/Home/home';
