@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { login, reset } from '../../features/auth/authSlice'
 import { useEffect } from 'react'
+import Loading from '../Loading/Loading'
 
 function Login() {
     const navigate = useNavigate();
@@ -49,6 +50,10 @@ function Login() {
     dispatch(reset())
 
   }, [user, isError, isSuccess, message, navigate, dispatch])
+
+  if(isLoading){
+    return <Loading />
+  }
 
   return (
     <div className='login'>
