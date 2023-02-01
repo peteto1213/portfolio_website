@@ -15,11 +15,11 @@ function Login() {
     password: ''
   })
 
-  const {username, password} = form
+  const { username, password } = form
 
   const dispatch = useDispatch()
 
-  const {user, isLoading, isSuccess, isError, message} = useSelector((state) => state.auth)
+  const { user, isLoading, isSuccess, isError, message } = useSelector((state) => state.auth)
 
   const handleChange = (event) => {
     const{ name, value } = event.target
@@ -51,12 +51,17 @@ function Login() {
 
   }, [user, isError, isSuccess, message, navigate, dispatch])
 
+  function navigateHome(){
+    navigate('/')
+  }
+
   if(isLoading){
     return <Loading />
   }
 
   return (
     <div className='login'>
+      <button onClick={navigateHome} className='btn'>Back to webpage</button>
       <div className="heading">
         <FaSignInAlt />
         <h3>Login to explore the materials</h3>

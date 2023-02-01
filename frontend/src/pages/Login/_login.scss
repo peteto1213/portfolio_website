@@ -8,6 +8,19 @@
     padding: 2rem;
     min-height: 100vh;
 
+    .btn{
+        border: none;
+        padding: 1.2rem 2rem;
+        background: rgb(17, 58, 17);
+        color: whitesmoke;
+        border-radius: 1.5rem;
+        transition: 0.2s all linear;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+
     .heading{
         width: 100%;
         display: flex;

@@ -1,59 +1,65 @@
-* {
-    padding: 0;
-    margin: 0;
-    outline: 0;
-    color: #fff;
-    font-family: 'IBM Plex Sans', sans-serif;
+.loader {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  perspective: 800px;
+}
+
+.inner {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;  
+}
+
+.inner.one {
+  left: 0%;
+  top: 0%;
+  animation: rotate-one 1s linear infinite;
+  border-bottom: 3px solid #111;
+}
+
+.inner.two {
+  right: 0%;
+  top: 0%;
+  animation: rotate-two 1s linear infinite;
+  border-right: 3px solid #111;
+}
+
+.inner.three {
+  right: 0%;
+  bottom: 0%;
+  animation: rotate-three 1s linear infinite;
+  border-top: 3px solid #111;
+}
+
+@keyframes rotate-one {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
   }
-  body {
-      background: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      width: 100vw; 
-      overflow: hidden;
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
   }
-  .loader-svg {
-      display: flex;
-      align-items: flex-end;
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
   }
-  .loader-svg .mid svg polygon {
-      stroke-dasharray: 50;
-      animation: midanim 2.5s linear infinite;
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
   }
-  @keyframes midanim {
-    to {
-      stroke-dashoffset:100; 
-    }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
   }
-  .loader-svg svg polygon {
-      stroke-dasharray: 25;
-      animation: anim 2s linear infinite;
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
-  @keyframes anim {
-    to {
-      stroke-dashoffset:100; 
-    }
-  }
-  .loader-text {
-      text-align: center;
-      font-size: 50px;
-      text-transform: uppercase;
-      margin: 20px 0;
-      color: transparent;
-      -webkit-text-stroke: 0.5px #fff;
-  }
-  .loader-text span {
-    color: transparent;
-      -webkit-text-stroke: 0.5px #fff;
-      animation: dash 1.5s infinite;
-  }
-  @keyframes dash {
-    from {
-      -webkit-text-stroke: 0.5px #fff;
-    }
-    to {
-      color: #fff;
-    } 
-  }
+}
