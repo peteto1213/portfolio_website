@@ -32,13 +32,11 @@ function Contact() {
   const copyEmail = () => {
     setEmail("peteto1213@gmail.com")
     navigator.clipboard.writeText(email)
-    alert("email copied")
   }
 
   const copyPhone = () => {
     setPhone("+852 64875640")
     navigator.clipboard.writeText(phone)
-    alert("phone number copied")
   }
 
   return (
