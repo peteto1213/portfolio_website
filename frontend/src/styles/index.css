@@ -30,6 +30,7 @@
   gap: 0.5rem;
   justify-content: center;
   font-size: 3rem;
+  color: rgb(0, 0, 80);
 }
 .login .form-container {
   display: flex;
@@ -40,15 +41,10 @@
   padding: 2rem 5%;
 }
 .login .form-container img {
-  height: 20rem;
-  width: 20rem;
-  border-radius: 50%;
-  border: 0.4rem solid;
-  border-color: gray;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   align-self: center;
+  height: 15rem;
+  width: 15rem;
 }
 .login .form-container form {
   width: 100%;
@@ -58,14 +54,25 @@
 }
 .login .form-container form .input-field h3 {
   font-size: 1.7rem;
+  color: rgb(0, 0, 80);
 }
-.login .form-container form .input-field input {
+.login .form-container form .input-field .input-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+  border-bottom: 0.2rem solid rgb(0, 0, 80);
+  font-size: 1.5rem;
+  color: rgb(0, 0, 80);
+}
+.login .form-container form .input-field .input-container input {
   border: none;
   border-radius: 0.5rem;
-  border-bottom: 0.2rem solid black;
   padding: 1rem 0.5rem;
   width: 100%;
-  font-size: 1.5rem;
+}
+.login .form-container form .input-field .input-container input:focus {
+  outline: none;
 }
 .login .form-container form .btn {
   width: 50%;
@@ -73,9 +80,9 @@
   margin-top: 0;
   font-size: 1.7rem;
   padding: 1rem 0;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
   border: none;
-  background: rgb(129, 129, 129);
+  background: linear-gradient(to right, blue, rgb(141, 1, 255));
   color: white;
   cursor: pointer;
   transition: all 0.2s linear;
@@ -110,34 +117,22 @@
 .inner.one {
   left: 0%;
   top: 0%;
-  -webkit-animation: rotate-one 1s linear infinite;
-          animation: rotate-one 1s linear infinite;
+  animation: rotate-one 1s linear infinite;
   border-bottom: 3px solid #111;
 }
 
 .inner.two {
   right: 0%;
   top: 0%;
-  -webkit-animation: rotate-two 1s linear infinite;
-          animation: rotate-two 1s linear infinite;
+  animation: rotate-two 1s linear infinite;
   border-right: 3px solid #111;
 }
 
 .inner.three {
   right: 0%;
   bottom: 0%;
-  -webkit-animation: rotate-three 1s linear infinite;
-          animation: rotate-three 1s linear infinite;
+  animation: rotate-three 1s linear infinite;
   border-top: 3px solid #111;
-}
-
-@-webkit-keyframes rotate-one {
-  0% {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
-  }
-  100% {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
-  }
 }
 
 @keyframes rotate-one {
@@ -148,28 +143,12 @@
     transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
   }
 }
-@-webkit-keyframes rotate-two {
-  0% {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-  }
-  100% {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-  }
-}
 @keyframes rotate-two {
   0% {
     transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
   }
   100% {
     transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-  }
-}
-@-webkit-keyframes rotate-three {
-  0% {
-    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
-  }
-  100% {
-    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
 }
 @keyframes rotate-three {

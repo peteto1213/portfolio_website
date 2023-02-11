@@ -1,11 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
-import { FaSignInAlt } from 'react-icons/fa'
+import { FaSignInAlt, FaUserAlt, FaLock } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { login, reset } from '../../features/auth/authSlice'
 import { useEffect } from 'react'
 import Loading from '../Loading/Loading'
+import logo from '../../resources/cmdb.png'
 
 function Login() {
     const navigate = useNavigate();
@@ -68,31 +69,37 @@ function Login() {
       </div>
 
       <div className="form-container">
-        <img src="" alt="websiteLogo" />
+        <img src={logo} alt="websiteLogo" />
 
         <form onSubmit={handleLogin}>
           <div className="input-field">
-            <h3>username</h3>
-            <input 
-              type="text"
-              placeholder='admin'
-              name='username'
-              value={form.username}
-              onChange={handleChange}
-              required
-            />
+            <h3>Username</h3>
+            <div className="input-container">
+              <FaUserAlt className='icon' />
+              <input 
+                type="text"
+                placeholder='Corp ID'
+                name='username'
+                value={form.username}
+                onChange={handleChange}
+                required
+              />
+            </div>
           </div>
 
           <div className="input-field">
-            <h3>password</h3>
-            <input 
-              type="password"
-              placeholder='password'
-              name='password'
-              value={form.password}
-              onChange={handleChange}
-              required
-            />
+            <h3>Password</h3>
+            <div className="input-container">
+              <FaLock className='icon' />
+              <input 
+                type="password"
+                placeholder='Password'
+                name='password'
+                value={form.password}
+                onChange={handleChange}
+                required
+              />
+            </div>
           </div>
           <button className='btn'>Login</button>
         </form>
